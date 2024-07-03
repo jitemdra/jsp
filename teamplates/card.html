@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - JRP Welfare foundation</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- custom bootstrap and css -->
+  <title>Nominee Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+      .header {
+          background-color: #337ab7;
+          color: #ffffff;
+          padding: 10px;
+          text-align: center;
+      }
+  </style>
+
+  <!-- Favicons -->
+  <link href="{% static 'img/Logo.jpg' %}" rel="icon">
+  {% comment %} <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon"> {% endcomment %}
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css'%}" rel="stylesheet">
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Medilab
+  * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:baghelj225@gmail.com">baghelj225@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><a href="tel:8533886575"></a> <small><a href="tel:+919520864871">+919520864871</a></small> </i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="#" class="logo d-flex align-items-center me-auto">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="{% static 'img/JRP.jpg' %}" alt="">
+          <h1 class="sitename">JPRFOUNDATION</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="home" class="active">Home<br></a></li>
+            <li><a href="home">About</a></li>
+            <li><a href="home">Services</a></li>
+            <li><a href="home">Departments</a></li>
+            <li><a href="home">Doctors</a></li>
+            <li><a href="home">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        <a class="cta-btn d-none d-sm-block" href="card">Make your card</a>
+        <a class="cta-btn d-none d-sm-block" href="{% url 'logout' %}">Login out</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <div class="container">
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label for="mobileNumber">Mobile Number</label>
+            <input type="tel" class="form-control" id="mobileNumber" placeholder="Enter mobile number">
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea class="form-control" id="address" placeholder="Enter address"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter password">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" id="gender">
+                <option value="">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" class="form-control" id="dob" placeholder="Enter date of birth">
+        </div>
+        <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" class="form-control" id="state" placeholder="Enter state">
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" placeholder="Enter city">
+        </div>
+        <div class="form-group">
+            <label for="madeBy">Made By</label>
+            <input type="text" class="form-control" id="madeBy" placeholder="Enter made by">
+        </div>
+        <div class="header bg-primary">
+            <h2>Nominee Details</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="nomineeName">Name</label>
+                    <input type="text" class="form-control" id="nomineeName" placeholder="Enter nominee name">
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="nomineeRelation">Relation</label>
+                    <input type="text" class="form-control" id="nomineeRelation" placeholder="Enter nominee relation">
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="nomineeAge">Age</label>
+                    <input type="number" class="form-control" id="nomineeAge" placeholder="Enter nominee age">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="nomineeName">Name</label>
+                    <input type="text" class="form-control" id="nomineeName" placeholder="Enter nominee name">
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="nomineeRelation">Relation</label>
+                    <input type="text" class="form-control" id="nomineeRelation" placeholder="Enter nominee relation">
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="nomineeAge">Age</label>
+                    <input type="number" class="form-control" id="nomineeAge" placeholder="Enter nominee age">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="nomineeName">Name</label>
+                    <input type="text" class="form-control" id="nomineeName" placeholder="Enter nominee name">
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="nomineeRelation">Relation</label>
+                    <input type="text" class="form-control" id="nomineeRelation" placeholder="Enter nominee relation">
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="nomineeAge">Age</label>
+                    <input type="number" class="form-control" id="nomineeAge" placeholder="Enter nominee age">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="nomineeName">Name</label>
+                    <input type="text" class="form-control" id="nomineeName" placeholder="Enter nominee name">
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="nomineeRelation">Relation</label>
+                    <input type="text" class="form-control" id="nomineeRelation" placeholder="Enter nominee relation">
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="nomineeAge">Age</label>
+                    <input type="number" class="form-control" id="nomineeAge" placeholder="Enter nominee age">
+                </div>
+            </div>
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">JPRFOUNDATION</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Powered by <a href="https://insurehealthindia.com/">Mudra swasthya seva Pvt.Ltd</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <!-- Custom javascripte -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
